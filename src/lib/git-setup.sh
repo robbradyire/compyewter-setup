@@ -1,7 +1,12 @@
 #! /usr/bin/env bash
 
+# git_setup
+#
+# Prompts the user to enter git config settings
 git_setup()
 {
+  confirm "Set up git config?" || return
+
   local GIT_USER USER
   USER=$(git config --global --get user.name)
   echo -n "Enter your git username$([ -n "$USER" ] && echo " (default: \"$USER\")"): "
