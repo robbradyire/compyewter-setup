@@ -1,5 +1,9 @@
 #! /usr/bin/env bash
 
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "${__dir}/lib/*.sh"
+
 apt-get update
 
 # Install some useful things
@@ -26,3 +30,6 @@ apt-get install -y gimp
 ## Fun times
 apt-get install -y discord
 apt-get install -y steam
+
+# Set up git
+git_setup

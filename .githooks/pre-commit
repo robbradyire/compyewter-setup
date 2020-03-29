@@ -49,7 +49,7 @@ changed_shell_files=$(
 
 print_msg yellow "Running shellcheck..."
 # shellcheck disable=SC2086
-if [ -n "$changed_shell_files" ] && shellcheck -a $changed_shell_files; then
+if [ -n "$changed_shell_files" ] && shellcheck -ax --exclude SC1090 $changed_shell_files; then
   print_msg green "shellcheck approved shell script changes"
 else
   print_msg red "shellcheck of script changes failed (return code: $?), " \
