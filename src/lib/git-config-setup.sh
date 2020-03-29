@@ -5,6 +5,11 @@
 # Prompts the user to enter git config settings.
 git_config_setup()
 {
+  if ! command -v git > /dev/null; then
+    echo "Unable to set up global git config, git not installed."
+    return
+  fi
+
   confirm "Set up global git config?" || return
 
   local GIT_USER CURRENT_USER MAYBE_DEFAULT_USER \
