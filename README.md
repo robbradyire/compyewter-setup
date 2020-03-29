@@ -1,4 +1,4 @@
-# Requirements
+# Requirements (development)
 
 - [Vagrant](https://www.vagrantup.com/)
 
@@ -13,6 +13,7 @@ vagrant@vagrant$ sudo /vagrant-src/kickstart.sh
 ```
 
 Once VM is running:
+
 ```bash
 $ vagrant destroy -f; vagrant up; vagrant ssh
 vagrant@vagrant$ sudo /vagrant-src/kickstart.sh
@@ -23,4 +24,3 @@ vagrant@vagrant$ sudo /vagrant-src/kickstart.sh
 TODO
 
 - wget script and run it :shrug:
-
