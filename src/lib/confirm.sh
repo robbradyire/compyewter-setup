@@ -2,8 +2,13 @@
 
 # confirm
 #
-# Prompts the user for a yes or no.
-# Example usage: `confirm "Do you want to install git?"`
+# Prompts the user with a given prompt for a yes or no.
+#
+# Params:
+#   $1: A prompt to ask the user.
+#
+# Example usage:
+#   confirm "Do you want to install git?"
 confirm()
 {
   if [ -z "$1" ]; then

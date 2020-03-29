@@ -18,46 +18,5 @@ apt-get update
 
 apt-get install -y git
 
-(confirm "Install CLI tools?")
-INSTALL_CLI_TOOLS=$?
-
-(confirm "Install development tools")
-INSTALL_DEV_TOOLS=$?
-
-(confirm "Install browsers?")
-INSTALL_BROWSERS=$?
-
-(confirm "Install editing software?")
-INSTALL_EDITING_SUITES=$?
-
-(confirm "Install gaming software?")
-INSTALL_GAMING_SOFTWARE=$?
-
-if $INSTALL_CLI_TOOLS; then
-  apt-get install -y bash-completion
-  apt-get install -y curl
-  apt-get install -y xclip
-fi
-
-if $INSTALL_DEV_TOOLS; then
-  apt-get install -y vagrant
-  apt-get install -y vim
-  apt-get install -y virtualbox
-fi
-
-if $INSTALL_BROWSERS; then
-  apt-get install -y firefox
-  apt-get install -y google-chrome-stable
-fi
-
-if $INSTALL_EDITING_SUITES; then
-  apt-get install -y darktable
-  apt-get install -y gimp
-fi
-
-if $INSTALL_GAMING_SOFTWARE; then
-  apt-get install -y discord
-  apt-get install -y steam
-fi
-
+install_packages
 git_config_setup

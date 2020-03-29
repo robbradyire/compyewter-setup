@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
-# git_setup
+# git_config_setup
 #
-# Prompts the user to enter git config settings
+# Prompts the user to enter git config settings.
 git_config_setup()
 {
   confirm "Set up git config?" || return
