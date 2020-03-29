@@ -1,8 +1,12 @@
 # Requirements (development)
 
 - [Vagrant](https://www.vagrantup.com/)
+- [ShellCheck](https://www.shellcheck.net/)
 
 # Run instructions (development)
+
+- Clone repo and `cd` in
+- Run `git config core.hooksPath .githooks`
 
 First time running:
 
