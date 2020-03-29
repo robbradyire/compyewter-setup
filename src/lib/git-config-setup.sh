@@ -3,7 +3,7 @@
 # git_setup
 #
 # Prompts the user to enter git config settings
-git_setup()
+git_config_setup()
 {
   confirm "Set up git config?" || return
 
@@ -15,4 +15,6 @@ git_setup()
     echo "Entered: $GIT_USER"
     git config --global user.name "$GIT_USER" && echo "Set user.name to $GIT_USER"
   fi
+
+  # TODO: also set email, default editor, push.default
 }

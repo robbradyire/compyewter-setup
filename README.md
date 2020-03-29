@@ -25,6 +25,4 @@ vagrant@vagrant$ sudo /vagrant-src/kickstart.sh
 
 # Run instructions (on a fresh install)
 
-TODO
-
-- wget script and run it :shrug:
+TODO (something along the lines of wget scripts and run it all :shrug:)
